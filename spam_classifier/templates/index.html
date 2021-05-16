@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ title }}
+{% endblock title %}
+
+{% block content %}
+<h1>Welcome HomePage</h1>
+<form action="{{ url_for('predict') }}" method="POST">
+    <label for="predict_text"></label>
+    <br><br>
+    <textarea name="predict_text" id="text" cols="30" rows="10" placeholder="Enter text here"
+        required="True"></textarea>
+    <input type="submit" value="Predict">
+</form>
+{% endblock content %}
